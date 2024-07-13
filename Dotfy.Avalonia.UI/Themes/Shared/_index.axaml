@@ -9,6 +9,7 @@
         <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/CaptionButtons.axaml" />
         <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/Dialog.axaml" />
         <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/Divider.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/IconButton.axaml" />
         <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/Menu.axaml" />
         <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/RadioButton.axaml" />
         <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/TextBlock.axaml" />

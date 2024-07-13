@@ -19,7 +19,6 @@
 
 
 	<!--  Light  -->
-	<SolidColorBrush x:Key="IconButtonDefaultPrimaryForeground" Color="#FF1C1F23"/>
 	<SolidColorBrush x:Key="ButtonDefaultPrimaryForeground" Color="#0077FA" />
 	<SolidColorBrush x:Key="ButtonDefaultSecondaryForeground" Color="#0095EE" />
 	<SolidColorBrush x:Key="ButtonDefaultTertiaryForeground" Color="#6B7075" />

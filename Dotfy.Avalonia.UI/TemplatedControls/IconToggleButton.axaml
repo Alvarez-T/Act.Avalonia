@@ -11,11 +11,11 @@
           <converters:BooleanToOpacityConverter x:Key="OpacityConverter" />
       </Style.Resources>
 	  <Setter Property="Background" Value="{DynamicResource ButtonDefaultBackground}" />
-      <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultPrimaryForeground}" />
+      <Setter Property="Foreground" Value="{DynamicResource IconButtonPrimaryForeground}" />
       <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultBorderBrush}" />
-      <Setter Property="CornerRadius" Value="{DynamicResource ButtonCornerRadius}" />
+      <Setter Property="CornerRadius" Value="{DynamicResource IconButtonCornerRadius}" />
       <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThickness}" />
-      <Setter Property="Padding" Value="{DynamicResource ButtonDefaultPadding}" />
+      <Setter Property="Padding" Value="{DynamicResource IconButtonPadding}" />
       <Setter Property="BackgroundSizing" Value="OuterBorderEdge" />
       <Setter Property="RenderTransform" Value="none" />
       <Setter Property="FontSize" Value="{DynamicResource ButtonDefaultFontSize}" />

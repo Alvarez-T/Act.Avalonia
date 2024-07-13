@@ -1,0 +1,18 @@
+<ResourceDictionary
+    x:CompileBindings="True"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/Border.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/Button.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/ContextMenu.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/Dialog.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/IconButton.axaml" />
+		<ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/Menu.axaml" />
+		<ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/MenuFlyoutPresenter.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/RadioButton.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/TextBlock.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/TextBox.axaml" />
+        <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/ToggleButton.axaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

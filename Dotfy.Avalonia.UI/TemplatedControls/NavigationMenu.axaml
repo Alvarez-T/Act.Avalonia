@@ -1,0 +1,23 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:templatedControls="clr-namespace:Dotfy.Avalonia.UI.TemplatedControls">
+  <Design.PreviewWith>
+    <templatedControls:NavigationMenu />
+  </Design.PreviewWith>
+
+  <Style Selector="templatedControls|NavigationMenu">
+    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <SplitView DisplayMode="{TemplateBinding NavigationMenuDisplayMode}"
+					 CompactPaneLength="73">
+              <DockPanel LastChildFill="True">
+                  <Button />
+              </DockPanel>
+
+
+          </SplitView>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>

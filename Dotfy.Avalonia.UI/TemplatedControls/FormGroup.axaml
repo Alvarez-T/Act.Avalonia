@@ -1,0 +1,24 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Dotfy.Avalonia.UI.TemplatedControls">
+  <Design.PreviewWith>
+    <controls:FormGroup />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|FormGroup">
+    <!-- Set Defaults -->
+    <Setter Property="Template">
+        <ControlTemplate>
+            <StackPanel Margin="0 28 0 0">
+                <ContentPresenter Content="{TemplateBinding Header}" FontWeight="Bold" FontSize="18" />
+                <Rectangle
+                    Height="1"
+                    Margin="0,8"
+                    HorizontalAlignment="Stretch"
+                    Fill="{DynamicResource SemiColorBorder}" />
+                <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
+            </StackPanel>
+        </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>

@@ -1,0 +1,142 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:templatedControls="clr-namespace:Dotfy.Avalonia.UI.TemplatedControls"
+        xmlns:converters="clr-namespace:Dotfy.Avalonia.UI.Converters">
+  <Design.PreviewWith>
+	  <templatedControls:IconButton Content="TTTTTTttttttTTTTTTTT" VerticalContentAlignment="Stretch" IconPlacement="Top" Width="70" Height="100" >
+          <templatedControls:IconButton.Icon>
+              <PathIcon
+                  Width="50"
+                  Height="50"
+				  VerticalAlignment="Stretch"
+				  HorizontalAlignment="Stretch"
+                  Data="{StaticResource iconGlyph}" />
+          </templatedControls:IconButton.Icon>
+	  </templatedControls:IconButton>
+  </Design.PreviewWith>
+    
+  <Style Selector="templatedControls|IconButton">
+    <Style.Resources>
+        <converters:BooleanToOpacityConverter x:Key="OpacityConverter" />
+        <StreamGeometry x:Key="iconGlyph">M12.0101 1C5.92171 1 1 5.92171 1 12.0101C1 16.8771 4.15354 20.9967 8.5284 22.455C9.07526 22.5644 9.27577 22.218 9.27577 21.9264C9.27577 21.6712 9.25754 20.7962 9.25754 19.8848C6.19514 20.541 5.55714 18.5723 5.55714 18.5723C5.06497 17.2963 4.33583 16.9682 4.33583 16.9682C3.33326 16.2938 4.40874 16.2938 4.40874 16.2938C5.52069 16.3667 6.104 17.4239 6.104 17.4239C7.08834 19.101 8.67423 18.627 9.31223 18.3354C9.40337 17.6245 9.69503 17.1323 10.0049 16.8589C7.56229 16.6037 4.99206 15.6558 4.99206 11.4267C4.99206 10.2237 5.42954 9.23931 6.12223 8.47371C6.01286 8.20028 5.63006 7.07011 6.2316 5.55714C6.2316 5.55714 7.16126 5.26548 9.25754 6.68731C10.1325 6.45034 11.0804 6.32274 12.0101 6.32274C12.9397 6.32274 13.8876 6.45034 14.7626 6.68731C16.8589 5.26548 17.7885 5.55714 17.7885 5.55714C18.3901 7.07011 18.0073 8.20028 17.8979 8.47371C18.6088 9.23931 19.0281 10.2237 19.0281 11.4267C19.0281 15.6558 16.4578 16.5854 13.997 16.8589C14.398 17.2052 14.7443 17.8614 14.7443 18.9004C14.7443 20.377 14.7261 21.5618 14.7261 21.9264C14.7261 22.218 14.9266 22.5644 15.4735 22.455C19.8483 20.9967 23.0019 16.8771 23.0019 12.0101C23.0201 5.92171 18.0802 1 12.0101 1Z</StreamGeometry>
+    </Style.Resources>
+      <Setter Property="Background" Value="{DynamicResource ButtonDefaultBackground}" />
+      <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultPrimaryForeground}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultBorderBrush}" />
+      <Setter Property="CornerRadius" Value="{DynamicResource ButtonCornerRadius}" />
+      <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThickness}" />
+      <Setter Property="Padding" Value="{DynamicResource ButtonDefaultPadding}" />
+      <Setter Property="RenderTransform" Value="none" />
+      <Setter Property="FontSize" Value="{DynamicResource ButtonDefaultFontSize}" />
+      <Setter Property="FontWeight" Value="{DynamicResource ButtonDefaultFontWeight}" />
+      <Setter Property="HorizontalContentAlignment" Value="Center" />
+      <Setter Property="VerticalContentAlignment" Value="Center" />
+      <Setter Property="HorizontalAlignment" Value="Left" />
+      <Setter Property="MinHeight" Value="12" />
+      <Setter Property="Cursor" Value="Hand" />
+      <Setter Property="Template" Value="{StaticResource IconButtonTemplate}" />
+
+	  <Style Selector="^:pressed">
+		  <Setter Property="RenderTransform" Value="scale(0.98)" />
+	  </Style>
+
+	  <Style Selector="^.Primary">
+		  <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultPrimaryForeground}" />
+	  </Style>
+	  <Style Selector="^.Secondary">
+		  <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultSecondaryForeground}" />
+	  </Style>
+	  <Style Selector="^.Tertiary">
+		  <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultTertiaryForeground}" />
+	  </Style>
+	  <Style Selector="^.Success">
+		  <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultSuccessForeground}" />
+	  </Style>
+	  <Style Selector="^.Warning">
+		  <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultWarningForeground}" />
+	  </Style>
+	  <Style Selector="^.Danger">
+		  <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDangerForeground}" />
+	  </Style>
+
+	  <Style Selector="^:pointerover">
+		  <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultPointeroverBorderBrush}" />
+		  <Setter Property="Background" Value="{DynamicResource ButtonDefaultPointeroverBackground}" />
+	  </Style>
+
+	  <Style Selector="^:pressed">
+		  <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultPressedBorderBrush}" />
+		  <Setter Property="Background" Value="{DynamicResource ButtonDefaultPressedBackground}" />
+	  </Style>
+
+	  <Style Selector="^:disabled">
+		  <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultDisabledBorderBrush}" />
+		  <Setter Property="Background" Value="{DynamicResource ButtonDefaultDisabledBackground}" />
+		  <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDisabledForeground}" />
+	  </Style>
+
+	  <Style Selector="^:empty[IsLoading=False] /template/ ContentPresenter#PART_ContentPresenter">
+		  <Setter Property="Margin" Value="0"></Setter>
+	  </Style>
+
+	  <Style Selector="^:right">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="1" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="0 0 8 0" />
+              <Setter Property="HorizontalAlignment" Value="Left" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:left">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="1" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="8 0 0 0" />
+              <Setter Property="HorizontalAlignment" Value="Left" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:top">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="1" />
+			  <Setter Property="Margin" Value="0 4 0 0" />
+              <Setter Property="HorizontalAlignment" Value="Center" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:bottom">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="1" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="0 0 0 4" />
+			  <Setter Property="HorizontalAlignment" Value="Center" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^.Large">
+		  <Setter Property="Padding" Value="{DynamicResource ButtonLargePadding}" />
+	  </Style>
+	  <Style Selector="^.Small">
+		  <Setter Property="Padding" Value="{DynamicResource ButtonSmallPadding}" />
+	  </Style>
+	  
+  </Style>
+</Styles>

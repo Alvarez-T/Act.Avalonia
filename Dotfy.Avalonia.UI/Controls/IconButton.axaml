@@ -1,0 +1,67 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dotfy="clr-namespace:Dotfy.Avalonia.UI.TemplatedControls">
+
+    <!-- Template -->
+    <ControlTemplate x:Key="IconButtonTemplate" TargetType="dotfy:IconButton">
+		<Border
+            Padding="{TemplateBinding Padding}"
+            Background="{TemplateBinding Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+            CornerRadius="{TemplateBinding CornerRadius}"
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}"
+            TextElement.FontSize="{TemplateBinding FontSize}"
+            TextElement.FontWeight="{TemplateBinding FontWeight}"
+            TextBlock.TextWrapping="Wrap"
+            UseLayoutRounding="False">
+            <Border.Transitions>
+                <Transitions>
+                    <BrushTransition Property="BorderBrush" Duration="0:0:0.2" />
+                    <BrushTransition Property="Background" Duration="0:0:0.2" />
+                </Transitions>
+            </Border.Transitions>
+            <Grid
+                Name="PART_Grid"
+                ColumnDefinitions="*, Auto"
+                RowDefinitions="*, Auto">
+				<Panel
+                    Name="PART_IconRoot"
+                    Grid.Column="0">
+					<Panel.IsVisible>
+						<MultiBinding Converter="{x:Static BoolConverters.Or}">
+							<Binding Path="IsLoading" RelativeSource="{RelativeSource TemplatedParent}" />
+							<Binding
+                                Converter="{x:Static ObjectConverters.IsNotNull}"
+                                Path="Icon"
+                                RelativeSource="{RelativeSource TemplatedParent}" />
+						</MultiBinding>
+					</Panel.IsVisible>
+					<ContentPresenter
+                        Content="{TemplateBinding Icon}"
+                        RecognizesAccessKey="True"
+                        Foreground="{DynamicResource IconButtonDefaultPrimaryForeground}"
+                        ContentTemplate="{TemplateBinding IconTemplate}"
+                        Opacity="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=!IsLoading, Converter={StaticResource OpacityConverter}}" />
+					<dotfy:LoadingIcon
+                        Classes="Small"
+                        Foreground="{TemplateBinding Foreground}"
+                        IsVisible="{TemplateBinding IsLoading}" />
+				</Panel>
+				<ContentPresenter
+                    Name="PART_ContentPresenter"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="8 0 0 0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Foreground="{DynamicResource IconButtonDefaultPrimaryForeground}"
+                    TextWrapping="Wrap"
+                    RecognizesAccessKey="True"
+                    IsVisible="{TemplateBinding Content, Converter={x:Static ObjectConverters.IsNotNull}}"
+                    Content="{TemplateBinding Content}" />
+			</Grid>
+		</Border>
+    </ControlTemplate>
+</ResourceDictionary>

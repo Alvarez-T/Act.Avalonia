@@ -1,0 +1,9 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="RadioButtonButtonUncheckedForeground" Opacity="0.8" Color="#F9F9F9" />
+    <SolidColorBrush x:Key="RadioButtonButtonUncheckedPointeroverBackground" Opacity="0.16" Color="White" />
+    <SolidColorBrush x:Key="RadioButtonButtonUncheckedDisabledForeground" Opacity="0.35" Color="#F9F9F9" />
+    <SolidColorBrush x:Key="RadioButtonButtonCheckedBackground" Color="#43444A" />
+    <SolidColorBrush x:Key="RadioButtonButtonCheckedForeground" Color="#54A9FF" />
+    <SolidColorBrush x:Key="RadioButtonButtonCheckedDisabledForeground" Opacity="0.35" Color="#F9F9F9" />
+</ResourceDictionary>

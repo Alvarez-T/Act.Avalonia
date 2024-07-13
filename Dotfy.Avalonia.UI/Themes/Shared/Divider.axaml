@@ -1,0 +1,45 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="DividerBorderBrush" Opacity="0.2" Color="#1C1F23" />
+
+    <x:Double x:Key="SizeDividerVerticalHeight">20</x:Double>
+    <x:Double x:Key="SizeDividerVerticaMinHeight">0</x:Double>
+    <x:Double x:Key="SizeDividerLeftWidth">40</x:Double>
+    <x:Double x:Key="SizeDividerRightWidth">40</x:Double>
+    <x:Double x:Key="SizeDividerLeftMinWidth">20</x:Double>
+    <x:Double x:Key="SizeDividerRightMinWidth">20</x:Double>
+    <x:Double x:Key="SizeDividerWidth">1</x:Double>
+
+    <Thickness x:Key="ThicknessDividerVerticalMargin">1,0</Thickness>
+    <Thickness x:Key="ThicknessDividerHorizontalMargin">0,1</Thickness>
+    <Thickness x:Key="ThicknessDividerTextMargin">8,0</Thickness>
+
+
+	<ControlTheme x:Key="DividerLeftLine" TargetType="{x:Type Rectangle}">
+		<Setter Property="Rectangle.Fill" Value="{DynamicResource DividerBorderBrush}" />
+		<Setter Property="Rectangle.Height" Value="{DynamicResource SizeDividerWidth}" />
+		<Setter Property="Rectangle.MinWidth" Value="{DynamicResource SizeDividerLeftMinWidth}" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+	</ControlTheme>
+
+	<ControlTheme x:Key="DividerRightLine" TargetType="{x:Type Rectangle}">
+		<Setter Property="Rectangle.Fill" Value="{DynamicResource DividerBorderBrush}" />
+		<Setter Property="Rectangle.Height" Value="{DynamicResource SizeDividerWidth}" />
+		<Setter Property="Rectangle.MinWidth" Value="{DynamicResource SizeDividerRightMinWidth}" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+	</ControlTheme>
+
+	<ControlTheme x:Key="DividerContentPresenter" TargetType="{x:Type ContentPresenter}">
+		<Setter Property="ContentPresenter.Content" Value="{TemplateBinding Content}" />
+		<Setter Property="ContentPresenter.Background" Value="{TemplateBinding Background}" />
+		<Setter Property="TextElement.Foreground" Value="{TemplateBinding Foreground}" />
+		<Setter Property="ContentPresenter.ContentTemplate" Value="{TemplateBinding ContentTemplate}" />
+		<Setter Property="TextElement.FontFamily" Value="{TemplateBinding FontFamily}" />
+		<Setter Property="TextElement.FontWeight" Value="{TemplateBinding FontWeight}" />
+		<Setter Property="TextElement.FontSize" Value="{TemplateBinding FontSize}" />
+		<Setter Property="ContentPresenter.IsVisible" Value="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Converter={x:Static ObjectConverters.IsNotNull}}" />
+		<Setter Property="ContentPresenter.Margin" Value="{DynamicResource ThicknessDividerTextMargin}" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+	</ControlTheme>
+
+</ResourceDictionary>

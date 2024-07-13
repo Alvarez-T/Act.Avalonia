@@ -1,0 +1,64 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ControlTheme x:Key="RadioButtonAsButton" TargetType="RadioButton">
+		<Setter Property="RadioButton.CornerRadius" Value="{DynamicResource RadioButtonButtonCornerRadius}" />
+		<Setter Property="RadioButton.VerticalContentAlignment" Value="Center" />
+		<Setter Property="RadioButton.Margin" Value="2" />
+		<Setter Property="RadioButton.Cursor" Value="Hand" />
+		<Setter Property="RadioButton.FontWeight" Value="{DynamicResource RadioButtonButtonFontWeight}" />
+		<Setter Property="RadioButton.FontSize" Value="{DynamicResource RadioButtonButtonDefaultFontSize}" />
+		<Setter Property="RadioButton.Padding" Value="{DynamicResource RadioButtonButtonDefaultPadding}" />
+		<Setter Property="RadioButton.Foreground" Value="{DynamicResource RadioButtonButtonUncheckedForeground}" />
+		<Setter Property="RadioButton.Template">
+			<ControlTemplate TargetType="RadioButton">
+				<ContentPresenter
+                    x:Name="PART_ContentPresenter"
+                    Margin="{TemplateBinding Margin}"
+                    Padding="{TemplateBinding Padding}"
+                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Content="{TemplateBinding Content}"
+                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                    CornerRadius="{TemplateBinding CornerRadius}"
+                    RecognizesAccessKey="True"
+                    TextElement.FontSize="{TemplateBinding FontSize}"
+                    TextElement.FontWeight="{TemplateBinding FontWeight}"
+                    UseLayoutRounding="False">
+                    <ContentPresenter.Transitions>
+                        <Transitions>
+                            <BrushTransition Property="BorderBrush" Duration="0:0:0.2" />
+                            <BrushTransition Property="Background" Duration="0:0:0.2" />
+                        </Transitions>
+                    </ContentPresenter.Transitions>
+				</ContentPresenter>
+			</ControlTemplate>
+		</Setter>
+		<Style Selector="^:unchecked">
+			<Setter Property="Background" Value="Transparent" />
+			<Style Selector="^:pointerover">
+				<Setter Property="Background" Value="{DynamicResource RadioButtonButtonUncheckedPointeroverBackground}" />
+			</Style>
+			<Style Selector="^:disabled">
+				<Setter Property="Foreground" Value="{DynamicResource RadioButtonButtonUncheckedDisabledForeground}" />
+			</Style>
+		</Style>
+		<Style Selector="^:checked">
+			<Setter Property="Background" Value="{DynamicResource RadioButtonButtonCheckedBackground}" />
+			<Setter Property="Foreground" Value="{DynamicResource RadioButtonButtonCheckedForeground}" />
+			<Style Selector="^:disabled">
+				<Setter Property="Foreground" Value="{DynamicResource RadioButtonButtonCheckedDisabledForeground}" />
+			</Style>
+		</Style>
+		<Style Selector="^.Small">
+			<Setter Property="FontSize" Value="{DynamicResource RadioButtonButtonSmallFontSize}" />
+			<Setter Property="Padding" Value="{DynamicResource RadioButtonButtonSmallPadding}" />
+		</Style>
+		<Style Selector="^.Large">
+			<Setter Property="FontSize" Value="{DynamicResource RadioButtonButtonLargeFontSize}" />
+			<Setter Property="Padding" Value="{DynamicResource RadioButtonButtonLargePadding}" />
+		</Style>
+	</ControlTheme>
+</ResourceDictionary>

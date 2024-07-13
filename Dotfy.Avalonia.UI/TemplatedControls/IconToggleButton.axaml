@@ -1,0 +1,249 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Dotfy.Avalonia.UI.TemplatedControls"
+        xmlns:converters="clr-namespace:Dotfy.Avalonia.UI.Converters">
+  <Design.PreviewWith>
+    <controls:IconToggleButton />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|IconToggleButton">
+      <Style.Resources>
+          <converters:BooleanToOpacityConverter x:Key="OpacityConverter" />
+      </Style.Resources>
+	  <Setter Property="Background" Value="{DynamicResource ButtonDefaultBackground}" />
+      <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultPrimaryForeground}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultBorderBrush}" />
+      <Setter Property="CornerRadius" Value="{DynamicResource ButtonCornerRadius}" />
+      <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThickness}" />
+      <Setter Property="Padding" Value="{DynamicResource ButtonDefaultPadding}" />
+      <Setter Property="BackgroundSizing" Value="OuterBorderEdge" />
+      <Setter Property="RenderTransform" Value="none" />
+      <Setter Property="FontSize" Value="{DynamicResource ButtonDefaultFontSize}" />
+      <Setter Property="FontWeight" Value="{DynamicResource ButtonDefaultFontWeight}" />
+      <Setter Property="HorizontalContentAlignment" Value="Center" />
+      <Setter Property="VerticalContentAlignment" Value="Center" />
+      <Setter Property="HorizontalAlignment" Value="Left" />
+      <Setter Property="MinHeight" Value="12" />
+      <Setter Property="Cursor" Value="Hand" />
+      <Setter Property="Template" Value="{StaticResource IconButtonTemplate}">
+    </Setter>
+
+      <Style Selector="^:pressed">
+          <Setter Property="RenderTransform" Value="scale(0.98)" />
+      </Style>
+
+      <Style Selector="^.Primary">
+          <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultPrimaryForeground}" />
+      </Style>
+      <Style Selector="^.Secondary">
+          <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultSecondaryForeground}" />
+      </Style>
+      <Style Selector="^.Tertiary">
+          <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultTertiaryForeground}" />
+      </Style>
+      <Style Selector="^.Success">
+          <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultSuccessForeground}" />
+      </Style>
+      <Style Selector="^.Warning">
+          <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultWarningForeground}" />
+      </Style>
+      <Style Selector="^.Danger">
+          <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDangerForeground}" />
+      </Style>
+
+      <Style Selector="^:checked">
+          <Setter Property="Foreground" Value="{DynamicResource ToggleButtonCheckedForeground}" />
+          <Setter Property="Background" Value="{DynamicResource ToggleButtonPrimaryCheckedBackground}" />
+          <Style Selector="^.Primary">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonPrimaryCheckedBackground}" />
+          </Style>
+          <Style Selector="^.Secondary">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonSecondaryCheckedBackground}" />
+          </Style>
+          <Style Selector="^.Tertiary">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonTertiaryCheckedBackground}" />
+          </Style>
+          <Style Selector="^.Success">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonSuccessCheckedBackground}" />
+          </Style>
+          <Style Selector="^.Warning">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonWarningCheckedBackground}" />
+          </Style>
+          <Style Selector="^.Danger">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonDangerCheckedBackground}" />
+          </Style>
+          <Style Selector="^:pointerover">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonPrimaryCheckedPointeroverBackground}" />
+              <Style Selector="^.Primary">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonPrimaryCheckedPointeroverBackground}" />
+              </Style>
+              <Style Selector="^.Secondary">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonSecondaryCheckedPointeroverBackground}" />
+              </Style>
+              <Style Selector="^.Tertiary">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonTertiaryCheckedPointeroverBackground}" />
+              </Style>
+              <Style Selector="^.Success">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonSuccessCheckedPointeroverBackground}" />
+              </Style>
+              <Style Selector="^.Warning">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonWarningCheckedPointeroverBackground}" />
+              </Style>
+              <Style Selector="^.Danger">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonDangerCheckedPointeroverBackground}" />
+              </Style>
+          </Style>
+          <Style Selector="^:pressed">
+              <Setter Property="Background" Value="{DynamicResource ToggleButtonPrimaryCheckedPressedBackground}" />
+              <Style Selector="^.Primary">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonPrimaryCheckedPressedBackground}" />
+              </Style>
+              <Style Selector="^.Secondary">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonSecondaryCheckedPressedBackground}" />
+              </Style>
+              <Style Selector="^.Tertiary">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonTertiaryCheckedPressedBackground}" />
+              </Style>
+              <Style Selector="^.Success">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonSuccessCheckedPressedBackground}" />
+              </Style>
+              <Style Selector="^.Warning">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonWarningCheckedPressedBackground}" />
+              </Style>
+              <Style Selector="^.Danger">
+                  <Setter Property="Background" Value="{DynamicResource ToggleButtonDangerCheckedPressedBackground}" />
+              </Style>
+          </Style>
+          <Style Selector="^:disabled">
+              <Setter Property="BorderBrush" Value="{DynamicResource ToggleButtonDefaultDisabledBorderBrush}" />
+          </Style>
+      </Style>
+
+	  <Style Selector="^:empty[IsLoading=False] /template/ ContentPresenter#PART_ContentPresenter">
+		  <Setter Property="Margin" Value="0"></Setter>
+	  </Style>
+
+	  <Style Selector="^:right">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="1" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="0 0 8 0" />
+			  <Setter Property="HorizontalAlignment" Value="Left" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:left">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="1" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="8 0 0 0" />
+			  <Setter Property="HorizontalAlignment" Value="Left" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:top">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="1" />
+			  <Setter Property="Margin" Value="0 4 0 0" />
+			  <Setter Property="HorizontalAlignment" Value="Center" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:bottom">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="1" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="0 0 0 4" />
+			  <Setter Property="HorizontalAlignment" Value="Center" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:empty[IsLoading=False] /template/ ContentPresenter#PART_ContentPresenter">
+		  <Setter Property="Margin" Value="0"></Setter>
+	  </Style>
+
+	  <Style Selector="^:right">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="1" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="0 0 8 0" />
+			  <Setter Property="HorizontalAlignment" Value="Left" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:left">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="1" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="8 0 0 0" />
+			  <Setter Property="HorizontalAlignment" Value="Left" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:top">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="1" />
+			  <Setter Property="Margin" Value="0 4 0 0" />
+			  <Setter Property="HorizontalAlignment" Value="Center" />
+		  </Style>
+	  </Style>
+
+	  <Style Selector="^:bottom">
+		  <Style Selector="^ /template/ Panel#PART_IconRoot">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="1" />
+		  </Style>
+		  <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+			  <Setter Property="Grid.Column" Value="0" />
+			  <Setter Property="Grid.Row" Value="0" />
+			  <Setter Property="Margin" Value="0 0 0 4" />
+			  <Setter Property="HorizontalAlignment" Value="Center" />
+		  </Style>
+	  </Style>
+
+      <Style Selector="^:disabled">
+		  <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultDisabledBorderBrush}" />
+          <Setter Property="Background" Value="{DynamicResource ButtonDefaultDisabledBackground}" />
+          <Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDisabledForeground}" />
+      </Style>
+
+      <Style Selector="^.Large">
+          <Setter Property="Padding" Value="{DynamicResource ButtonLargePadding}" />
+          <Setter Property="MinHeight" Value="{DynamicResource ButtonLargeHeight}" />
+      </Style>
+      <Style Selector="^.Small">
+          <Setter Property="Padding" Value="{DynamicResource ButtonSmallPadding}" />
+          <Setter Property="MinHeight" Value="{DynamicResource ButtonSmallHeight}" />
+      </Style>
+  </Style>
+</Styles>

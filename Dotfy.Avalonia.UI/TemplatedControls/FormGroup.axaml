@@ -15,7 +15,7 @@
                     Height="1"
                     Margin="0,8"
                     HorizontalAlignment="Stretch"
-                    Fill="{DynamicResource SemiColorBorder}" />
+                    Fill="{DynamicResource BorderBrush}" />
                 <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
             </StackPanel>
         </ControlTemplate>

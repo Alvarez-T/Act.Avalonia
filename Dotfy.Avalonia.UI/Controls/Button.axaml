@@ -232,7 +232,6 @@
 			<Setter Property="Background" Value="Transparent" />
 			<Setter Property="Foreground" Value="{DynamicResource ButtonDefaultDisabledForeground}" />
 		</Style>
-
 	</ControlTheme>
 
 </ResourceDictionary>

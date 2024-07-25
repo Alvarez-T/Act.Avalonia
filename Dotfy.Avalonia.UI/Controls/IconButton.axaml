@@ -2,7 +2,31 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:dotfy="clr-namespace:Dotfy.Avalonia.UI.TemplatedControls">
 
+    <ControlTheme x:Key="InnerIconButton" TargetType="dotfy:IconButton">
+        <Setter Property="Foreground" Value="{DynamicResource InnerIconButtonForeground}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <ControlTemplate TargetType="dotfy:IconButton">
+                <ContentControl Background="Transparent">
+                    <PathIcon
+                        Width="16"
+                        Height="16"
+                        Margin="{TemplateBinding Padding}"
+                        Data="{TemplateBinding Content}"
+                        Foreground="{TemplateBinding Foreground}" />
+                </ContentControl>
+            </ControlTemplate>
+        </Setter>
+        <Style Selector="^:pointerover">
+            <Setter Property="Foreground" Value="{DynamicResource InnerIconButtonPointeroverForeground}" />
+        </Style>
+        <Style Selector="^:pressed">
+            <Setter Property="Foreground" Value="{DynamicResource InnerIconButtonPressedForeground}" />
+        </Style>
+    </ControlTheme>
+
     <!-- Template -->
+	<!--
     <ControlTemplate x:Key="IconButtonTemplate" TargetType="dotfy:IconButton">
 		<Border
             Padding="{TemplateBinding Padding}"
@@ -63,5 +87,5 @@
                     Content="{TemplateBinding Content}" />
 			</Grid>
 		</Border>
-    </ControlTemplate>
+    </ControlTemplate>-->
 </ResourceDictionary>

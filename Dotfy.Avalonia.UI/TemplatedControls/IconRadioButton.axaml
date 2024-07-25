@@ -7,6 +7,8 @@
 
   <Style Selector="dotfy|IconRadioButton">
     <Setter Property="CornerRadius" Value="{DynamicResource RadioButtonButtonCornerRadius}" />
+    <Setter Property="Background" Value="{DynamicResource ButtonDefaultBackground}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ButtonDefaultBorderBrush}" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
     <Setter Property="Margin" Value="2" />
     <Setter Property="Cursor" Value="Hand" />
@@ -22,7 +24,13 @@
               Background="{TemplateBinding Background}"
               BorderBrush="{TemplateBinding BorderBrush}"
               BorderThickness="{TemplateBinding BorderThickness}"
-              CornerRadius="{TemplateBinding CornerRadius}">
+              Width="{TemplateBinding Width}"
+              Height="{TemplateBinding Height}"
+              TextElement.FontSize="{TemplateBinding FontSize}"
+              TextElement.FontWeight="{TemplateBinding FontWeight}"
+              TextBlock.TextWrapping="Wrap"
+              CornerRadius="{TemplateBinding CornerRadius}"
+              UseLayoutRounding="False">
               <Border.Transitions>
 				  <Transitions>
                       <BrushTransition Property="BorderBrush" Duration="0:0:0.2" />

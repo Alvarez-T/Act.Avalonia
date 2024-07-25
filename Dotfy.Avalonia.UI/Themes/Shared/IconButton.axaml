@@ -4,5 +4,11 @@
 
     <Thickness x:Key="IconButtonPadding">2</Thickness>
 	<CornerRadius x:Key="IconButtonCornerRadius">5</CornerRadius>
+
     <SolidColorBrush x:Key="IconButtonPrimaryForeground" Color="#FF1C1F23"/>
+
+
+    <SolidColorBrush x:Key="InnerIconButtonForeground" Color="#6B7075" />
+    <SolidColorBrush x:Key="InnerIconButtonPointeroverForeground" Color="#555B61" />
+    <SolidColorBrush x:Key="InnerIconButtonPressedForeground" Color="#41464C" />
 </ResourceDictionary>

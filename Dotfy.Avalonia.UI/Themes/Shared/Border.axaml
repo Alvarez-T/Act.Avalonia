@@ -3,7 +3,9 @@
     <Thickness x:Key="ThicknessCardPadding">20</Thickness>
     <Thickness x:Key="ThicknessCardMargin">4</Thickness>
     <Thickness x:Key="ThicknessCardBorderThickness">1</Thickness>
+
     <BoxShadows x:Key="BorderCardBoxShadow">0 0 14 0 #1A000000</BoxShadows>
-    <SolidColorBrush x:Key="BorderCardBackground" Color="White" />
-    <SolidColorBrush x:Key="BorderCardBorderBrush" Opacity="0.08" Color="#1C1F23" />
+
+    <SolidColorBrush x:Key="BorderBackground" Color="White" />
+    <SolidColorBrush x:Key="BorderBrush" Opacity="0.08" Color="#1C1F23" />
 </ResourceDictionary>

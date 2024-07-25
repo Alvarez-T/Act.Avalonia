@@ -23,7 +23,7 @@
 
     <ControlTheme x:Key="CardBorder" TargetType="Border">
         <Setter Property="Border.Padding" Value="{DynamicResource ThicknessCardPadding}" />
-        <Setter Property="Border.BorderBrush" Value="{DynamicResource BorderCardBorderBrush}" />
+        <Setter Property="Border.BorderBrush" Value="{DynamicResource BorderBrush}" />
         <Setter Property="Border.CornerRadius" Value="{DynamicResource RadiusCardCornerRadius}" />
         <Setter Property="Border.Background" Value="{DynamicResource BorderCardBackground}" />
         <Setter Property="Border.BorderThickness" Value="{DynamicResource ThicknessCardBorderThickness}" />

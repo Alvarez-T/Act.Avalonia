@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.Metadata;
 using Avalonia.Controls.Primitives;
 using Avalonia.Controls.Templates;
+using Avalonia.Interactivity;
 using Dotfy.Avalonia.UI.Common;
 using Dotfy.Avalonia.UI.Helpers;
 
@@ -83,5 +84,10 @@ namespace Dotfy.Avalonia.UI.TemplatedControls
             VerticalPosition.Bottom => ":bottom",
             _ => throw new ArgumentOutOfRangeException(nameof(placement), placement, null)
         };
+
+        protected override void OnIsCheckedChanged(RoutedEventArgs e)
+        {
+            base.OnIsCheckedChanged(e);
+        }
     }
 }

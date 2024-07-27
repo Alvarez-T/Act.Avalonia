@@ -6,6 +6,15 @@
   </Design.PreviewWith>
 
   <Style Selector="controls|EnumRadioButtonGroup">
-
+      <Setter Property="ItemsPanel">
+          <ControlTemplate>
+              <StackPanel Orientation="Horizontal"/>
+          </ControlTemplate>
+      </Setter>
+      <Setter Property="Template">
+          <ControlTemplate>
+              <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
+          </ControlTemplate>
+      </Setter>
   </Style>
 </Styles>

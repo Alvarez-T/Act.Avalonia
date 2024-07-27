@@ -1,10 +1,11 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
-using Avalonia.LogicalTree;
+using Avalonia.Interactivity;
 using Dotfy.Avalonia.UI.Helpers;
 using System;
 using Avalonia.Interactivity;
+using Avalonia.LogicalTree;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
@@ -40,18 +41,15 @@ public class EnumRadioButtonGroup : ItemsControl
         EnumMemberValueProperty.Changed.AddClassHandler<EnumRadioButtonGroup>((x, e) => x.OnEnumMemberValueChanged(e));
     }
 
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-
-
-    }
-
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
-       // AddHandler(IconRadioButton.IsCheckedChangedEvent, OnRadioButtonCheckedChanged, RoutingStrategies.Bubble);
+        AddHandler(ToggleButton.IsCheckedChangedEvent, OnRadioButtonCheckedChanged, RoutingStrategies.Bubble);
         foreach (var child in this.GetLogicalChildren().OfType<RadioButton>())
         {
+            RadioButton.IsCheckedChangedEvent.AddClassHandler<EnumRadioButtonGroup>((o, e) =>
+            {
+
+            }, handledEventsToo: true);
             child.IsCheckedChanged += OnRadioButtonCheckedChanged;
         }
     }

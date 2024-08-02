@@ -7,9 +7,9 @@
 
   <Style Selector="controls|EnumRadioButtonGroup">
       <Setter Property="ItemsPanel">
-          <ControlTemplate>
-              <StackPanel Orientation="Horizontal"/>
-          </ControlTemplate>
+          <ItemsPanelTemplate>
+              <StackPanel Orientation="{TemplateBinding Orientation}" Spacing="{TemplateBinding Spacing}"/>
+          </ItemsPanelTemplate>
       </Setter>
       <Setter Property="Template">
           <ControlTemplate>

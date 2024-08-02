@@ -4,7 +4,9 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Interactivity;
 using Dotfy.Avalonia.UI.Helpers;
 using System;
+using Avalonia.Automation;
 using Avalonia.Interactivity;
+using Avalonia.Layout;
 using Avalonia.LogicalTree;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
@@ -13,6 +15,24 @@ namespace Dotfy.Avalonia.UI.TemplatedControls;
 
 public class EnumRadioButtonGroup : ItemsControl
 {
+    public static readonly StyledProperty<Orientation> OrientationProperty =
+        AvaloniaProperty.Register<EnumRadioButtonGroup, Orientation>(nameof(Orientation));
+
+    public Orientation Orientation
+    {
+        get => GetValue(OrientationProperty);
+        set => SetValue(OrientationProperty, value);
+    }
+
+    public static readonly StyledProperty<double> SpacingProperty =
+        AvaloniaProperty.Register<StackPanel, double>(nameof(Spacing));
+
+    public double Spacing
+    {
+        get => GetValue(SpacingProperty);
+        set => SetValue(SpacingProperty, value);
+    }
+
     public static readonly StyledProperty<Enum> EnumValueProperty =
         AvaloniaProperty.Register<EnumRadioButtonGroup, Enum>(nameof(EnumValue));
 
@@ -37,6 +57,9 @@ public class EnumRadioButtonGroup : ItemsControl
 
     static EnumRadioButtonGroup()
     {
+        AffectsMeasure<EnumRadioButtonGroup>(SpacingProperty);
+        AffectsMeasure<EnumRadioButtonGroup>(OrientationProperty);
+
         EnumValueProperty.Changed.AddClassHandler<EnumRadioButtonGroup>((x, e) => x.OnEnumValueChanged(e));
         EnumMemberValueProperty.Changed.AddClassHandler<EnumRadioButtonGroup>((x, e) => x.OnEnumMemberValueChanged(e));
     }
@@ -44,19 +67,11 @@ public class EnumRadioButtonGroup : ItemsControl
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
         AddHandler(ToggleButton.IsCheckedChangedEvent, OnRadioButtonCheckedChanged, RoutingStrategies.Bubble);
-        foreach (var child in this.GetLogicalChildren().OfType<RadioButton>())
-        {
-            RadioButton.IsCheckedChangedEvent.AddClassHandler<EnumRadioButtonGroup>((o, e) =>
-            {
-
-            }, handledEventsToo: true);
-            child.IsCheckedChanged += OnRadioButtonCheckedChanged;
-        }
     }
 
     private void OnRadioButtonCheckedChanged(object? o, RoutedEventArgs e)
     {
-        if (o is RadioButton { IsChecked: true } radioButton)
+        if (e.Source is RadioButton { IsChecked: true } radioButton)
         {
             EnumValue = GetEnumMemberValue(radioButton);
         }
@@ -86,4 +101,3 @@ public class EnumRadioButtonGroup : ItemsControl
         return item is not RadioButton;
     }
 }
-

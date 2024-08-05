@@ -10,26 +10,26 @@
             </ResourceDictionary.ThemeDictionaries>
 			-->
             <ResourceDictionary.MergedDictionaries>
-                <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Controls/_index.axaml" />
-                <ResourceInclude Source="avares://Dotfy.Avalonia.UI/Themes/Shared/_index.axaml" />
+                <ResourceInclude Source="avares://Act.Avalonia.UI/Controls/_index.axaml" />
+                <ResourceInclude Source="avares://Act.Avalonia.UI/Themes/Shared/_index.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
         <converters:EnumToBooleanConverter x:Key="EnumToBooleanConverter"/>
     </Styles.Resources>
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/Badge.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/DialogOverlay.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/DialogOverlayHost.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/DialogWindow.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/Divider.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/EnumRadioButtonGroup.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/Form.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/FormGroup.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/FormItem.axaml" />
-	<StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/IconButton.axaml" />
-	<StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/IconRadioButton.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/IconToggleButton.axaml" />
-	<StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/LoadingIcon.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/NavigationMenu.axaml" />
-    <StyleInclude Source="avares://Dotfy.Avalonia.UI/TemplatedControls/SimpleDialogOverlay.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/Badge.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/DialogOverlay.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/DialogOverlayHost.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/DialogWindow.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/Divider.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/EnumRadioButtonGroup.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/Form.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/FormGroup.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/FormItem.axaml" />
+	<StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/IconButton.axaml" />
+	<StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/IconRadioButton.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/IconToggleButton.axaml" />
+	<StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/LoadingIcon.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/NavigationMenu.axaml" />
+    <StyleInclude Source="avares://Act.Avalonia.UI/TemplatedControls/SimpleDialogOverlay.axaml" />
 </Styles>

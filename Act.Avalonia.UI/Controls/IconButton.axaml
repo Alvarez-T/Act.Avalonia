@@ -27,7 +27,7 @@
 
     <!-- Template -->
 	<!--
-    <ControlTemplate x:Key="IconButtonTemplate" TargetType="dotfy:IconButton">
+    <ControlTemplate x:Key="IconButtonTemplate" TargetType="Act:IconButton">
 		<Border
             Padding="{TemplateBinding Padding}"
             Background="{TemplateBinding Background}"
@@ -68,7 +68,7 @@
                         Foreground="{DynamicResource IconButtonDefaultPrimaryForeground}"
                         ContentTemplate="{TemplateBinding IconTemplate}"
                         Opacity="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=!IsLoading, Converter={StaticResource OpacityConverter}}" />
-					<dotfy:LoadingIcon
+					<Act:LoadingIcon
                         Classes="Small"
                         Foreground="{TemplateBinding Foreground}"
                         IsVisible="{TemplateBinding IsLoading}" />

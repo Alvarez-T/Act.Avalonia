@@ -1,0 +1,69 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:templatedControls="clr-namespace:Act.Avalonia.UI.TemplatedControls">
+  <Design.PreviewWith>
+    <templatedControls:FormItem />
+  </Design.PreviewWith>
+
+  <Style Selector="templatedControls|FormItem">
+    <!-- Set Defaults -->
+	  <Setter Property="Margin" Value="0 8" />
+	  <Setter Property="Template">
+		  <ControlTemplate>
+			  <StackPanel>
+				  <StackPanel
+					  Name="PART_LabelPanel"
+					  Margin="0,0,0,4"
+					  HorizontalAlignment="{TemplateBinding LabelAlignment}"
+					  Orientation="Horizontal">
+					  <ContentPresenter Content="{TemplateBinding Label}" FontWeight="Bold" />
+					  <TextBlock
+						  Foreground="{DynamicResource SemiRed6}"
+						  IsVisible="{TemplateBinding IsRequired}"
+						  Text="*" />
+				  </StackPanel>
+				  <ContentPresenter Content="{TemplateBinding Content}" />
+			  </StackPanel>
+		  </ControlTemplate>
+	  </Setter>
+	  <Style Selector="^:not(:no-label):horizontal">
+		  <Setter Property="Template">
+			  <ControlTemplate>
+				  <Grid RowDefinitions="*, *">
+					  <Grid.ColumnDefinitions>
+						  <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+						  <ColumnDefinition Width="*" />
+					  </Grid.ColumnDefinitions>
+					  <Border
+						  Grid.Row="0"
+						  Grid.Column="0"
+						  Width="{TemplateBinding LabelWidth}">
+						  <StackPanel
+							  Name="PART_LabelPanel"
+							  Margin="8,8,8,0"
+							  HorizontalAlignment="{TemplateBinding LabelAlignment}"
+							  Orientation="Horizontal">
+							  <ContentPresenter Content="{TemplateBinding Label}" FontWeight="Bold" />
+							  <TextBlock
+								  Foreground="{DynamicResource SemiRed6}"
+								  IsVisible="{TemplateBinding IsRequired}"
+								  Text="*" />
+						  </StackPanel>
+					  </Border>
+					  <ContentPresenter
+						  Grid.Row="0"
+						  Grid.Column="1"
+						  Content="{TemplateBinding Content}" />
+				  </Grid>
+			  </ControlTemplate>
+		  </Setter>
+	  </Style>
+	  <Style Selector="^:no-label">
+		  <Setter Property="Template">
+			  <ControlTemplate>
+				  <ContentPresenter Content="{TemplateBinding Content}" />
+			  </ControlTemplate>
+		  </Setter>
+	  </Style>
+	</Style>
+</Styles>

@@ -1,0 +1,63 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:templatedControls="clr-namespace:Act.Avalonia.UI.TemplatedControls"
+        xmlns:converters="clr-namespace:Act.Avalonia.UI.Converters">
+  <Design.PreviewWith>
+    <templatedControls:LoadingIcon />
+  </Design.PreviewWith>
+
+  <Style Selector="templatedControls|LoadingIcon">
+	  <Style.Resources>
+          <converters:BrushToColorConverter x:Key="BrushToColorConverter" />
+	  </Style.Resources>
+      <!-- Set Defaults -->
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <Arc
+              Name="PART_Arc"
+              Width="20"
+              IsVisible="{TemplateBinding IsVisible}"
+              Height="20"
+              StartAngle="0"
+              StrokeJoin="Round"
+              StrokeLineCap="Round"
+              StrokeThickness="3"
+              SweepAngle="300">
+              <Arc.Stroke>
+                  <ConicGradientBrush Angle="70">
+                      <GradientStops>
+                          <GradientStop Offset="0" Color="{Binding Foreground, Converter={StaticResource BrushToColorConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                          <GradientStop Offset="0.2" Color="{Binding Foreground, Converter={StaticResource BrushToColorConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+                          <GradientStop Offset="0.6" Color="Transparent" />
+                      </GradientStops>
+                  </ConicGradientBrush>
+              </Arc.Stroke>
+              <Arc.Styles>
+                  <Style Selector="Arc[IsVisible=True]">
+                      <Style.Animations>
+                          <Animation IterationCount="Infinite" Duration="0:0:0.5">
+                              <KeyFrame Cue="0%">
+                                  <Setter Property="RotateTransform.Angle" Value="0.0" />
+                              </KeyFrame>
+                              <KeyFrame Cue="100%">
+                                  <Setter Property="RotateTransform.Angle" Value="-360.0" />
+                              </KeyFrame>
+                          </Animation>
+                      </Style.Animations>
+                  </Style>
+              </Arc.Styles>
+          </Arc>
+      </ControlTemplate>
+    </Setter>
+    <Style Selector="^.Small /template/ Arc#PART_Arc">
+        <Setter Property="Arc.Width" Value="14" />
+        <Setter Property="Arc.Height" Value="14" />
+        <Setter Property="Arc.StrokeThickness" Value="2" />
+    </Style>
+    <Style Selector="^.Large /template/ Arc#PART_Arc">
+        <Setter Property="Arc.Width" Value="32" />
+        <Setter Property="Arc.Height" Value="32" />
+        <Setter Property="Arc.StrokeThickness" Value="5" />
+    </Style>
+  </Style>
+</Styles>

@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Avalonia">
+    <AvaloniaUseCompiledBindingsByDefault>False</AvaloniaUseCompiledBindingsByDefault>
+    <AvaloniaXamlVerboseExceptions>True</AvaloniaXamlVerboseExceptions>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Controls\NavigationMenu.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="TemplatedControls\Badge.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="TemplatedControls\DialogWindow.axaml.cs">
+      <DependentUpon>DialogWindow.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Controls\RadioButton.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="TemplatedControls\Form.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\NavigatR\Navigatr.Avalonia\NavigatR.Avalonia.csproj" />
+  </ItemGroup>
+
+</Project>

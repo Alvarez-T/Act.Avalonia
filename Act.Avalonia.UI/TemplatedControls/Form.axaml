@@ -1,0 +1,23 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:templatedControls="clr-namespace:Act.Avalonia.UI.TemplatedControls">
+  <Design.PreviewWith>
+    <templatedControls:Form />
+  </Design.PreviewWith>
+
+  <Style Selector="templatedControls|Form">
+    <!-- Set Defaults -->
+    <Setter Property="Grid.IsSharedSizeScope" Value="False" />
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Template">
+        <ControlTemplate>
+            <DataValidationErrors>
+                <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
+            </DataValidationErrors>
+        </ControlTemplate>
+    </Setter>
+    <Style Selector="^:fixed-width">
+        <Setter Property="Grid.IsSharedSizeScope" Value="True" />
+    </Style>
+  </Style>
+</Styles>
